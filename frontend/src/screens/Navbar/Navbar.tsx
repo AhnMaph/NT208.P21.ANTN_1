@@ -60,7 +60,7 @@ const Navbar = () => {
         </div>
 
             {/* Đăng nhập / Đăng ký */}
-        <div className="hidden lg:flex items-center space-x-4">
+        <div className="hidden lg:flex items-center space-x-4 ">
           {!userInfo ? (
             <>
               <Link to="/auth/login">
@@ -71,6 +71,11 @@ const Navbar = () => {
               <Link to="/auth/register">
                 <button className="px-4 py-2 bg-orange-500 text-white rounded-lg hover:bg-yellow-400 transition duration-300">
                   Đăng ký
+                </button>
+              </Link>
+              <Link to="/auth/profile">
+                <button className="px-4 py-2 bg-orange-500 text-white rounded-lg hover:bg-yellow-400 transition duration-300">
+                  Profile
                 </button>
               </Link>
             </>
@@ -139,6 +144,10 @@ const Navbar = () => {
                         className="block py-3 text-black pl-3 dark:text-white dark:bg-gray-600 hover:text-white hover:bg-yellow-400 hover:border-yellow-500 hover:rounded-lg transition duration-300"
                         onClick={() => setIsOpen(false)}
                     >Đăng ký</Link>
+                    <Link to="/auth/profile"
+                        className="block py-3 text-black pl-3 dark:text-white dark:bg-gray-600 hover:text-white hover:bg-yellow-400 hover:border-yellow-500 hover:rounded-lg transition duration-300"
+                        onClick={() => setIsOpen(false)}
+                    >Profile</Link>
               </div>
           </div>
           

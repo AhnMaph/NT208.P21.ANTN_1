@@ -12,7 +12,7 @@ const App = () => {
   const hideFooter = location.pathname === "/auth/login";  // Kiểm tra nếu đang ở trang login
   const hideFooter01 = location.pathname === "/auth/register";
   return (
-    <div>
+    <div className="flex flex-col min-h-screen">
       {(!hideNavbar && !hideNavbar02 && <Navbar />)}  {/* Navbar luôn hiển thị */}
       <Outlet />   {/* Nội dung trang sẽ thay đổi ở đây */}
       {(!hideFooter && !hideFooter01 && <Footer />)}  {/* Navbar luôn hiển thị */}
